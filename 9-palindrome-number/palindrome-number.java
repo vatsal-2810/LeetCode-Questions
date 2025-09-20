@@ -5,14 +5,14 @@ class Solution {
             return false;
         }
 
-        int reversedHalf = 0;
-        while (x > reversedHalf) {
+        int reversed = 0;
+        while (x > reversed) {
             int digit = x % 10;
-            reversedHalf = reversedHalf * 10 + digit;
+            reversed = reversed * 10 + digit;
             x /= 10;
         }
 
 
-        return x == reversedHalf || x == reversedHalf / 10;
+        return x == reversed || x == reversed / 10;
     }
 }
